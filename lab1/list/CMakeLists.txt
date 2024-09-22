@@ -1,3 +1,3 @@
-add_library(list STATIC
-    List.c
+add_library(str_list STATIC
+    str_list.c
 )
