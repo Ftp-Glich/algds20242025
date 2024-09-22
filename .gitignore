@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 CMakePresets.json
 .vscode/
 build/
+=======
+.vscode/
+build/
+CMakePresets.json
+>>>>>>> 874e117e86b05a6c8e827901092d7511747595ab
