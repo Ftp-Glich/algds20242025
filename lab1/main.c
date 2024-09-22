@@ -3,6 +3,11 @@
 
 int main()
 {
-    printf("again");
+    List* list = initList();
+    addToList(list, "asjdfhjashdjasjkdhas");
+    addToList(list, "asjdfhjashdjasjkdhas");
+    addToList(list, "asjdfhjashdjasjkdhas");
+    printList(list);
+    deleteList(list);
     return 0;
 }
