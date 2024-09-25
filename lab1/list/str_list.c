@@ -19,7 +19,7 @@ void createNode(struct List* list, const char* str)
     list->len = strlen(str);
     list->next = 0;
     list->str = malloc(list->len);
-    memcpy(list->str, str, list->len);
+    strcpy(list->str, str, list->len);
 }
 
 void addToList(struct List* list, const char* str)
