@@ -10,8 +10,8 @@ typedef struct List {
 } List;
 
 List* initList();
-void createNode(List*, const char*);
-void addToList(List*, const char*);
+void createNode(struct List*, const char*);
+void addToList(struct List*, const char*);
 void deleteList(List*);
 void printList(List*);
 
