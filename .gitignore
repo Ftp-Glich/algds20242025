@@ -1,3 +1,4 @@
 .\CMakePresets.json
 .vscode/
 build/
+lab1/googletest/
