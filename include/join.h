@@ -4,10 +4,10 @@
 #include <stdlib.h>
 
 
-static size_t countLen(List* list)
+static unsigned int countLen(List* list)
 {
     List* ptr = list;
-    size_t res = 0;
+    unsigned int res = 0;
     while (ptr != 0)
     {
         res += ptr->len;
@@ -20,8 +20,8 @@ static size_t countLen(List* list)
 
 char* join(List* list)
 {
-    size_t len = countLen(list);
-    char* str = malloc(len + 1);
+    unsigned int len = countLen(list);
+    char* str = (char*)malloc(len + 1);
     int pos = 0;
     List* ptr = list;
     while (ptr != 0)

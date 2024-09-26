@@ -13,7 +13,7 @@ typedef struct List {
 
 List* initList()
 {
-    struct List* list = malloc(sizeof(struct List));
+    struct List* list = (List*)malloc(sizeof(struct List));
     if(list == NULL) 
         return NULL;
     list->len = 0;
@@ -27,8 +27,8 @@ void createNode(struct List* list, const char* str)
 {
     list->len = strlen(str);
     list->next = 0;
-    list->str = malloc(list->len);
-    strcpy(list->str, str, list->len);
+    list->str = (char*)malloc(list->len);
+    strcpy(list->str, str);
 }
 
 

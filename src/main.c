@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "list.h"
-#include "join.h"
+#include <list.h>
+#include <list.h>
 
 
-int main()
+int main(int argc, char* argv)
 {
     List* list = initList();
     addToList(list, "AsjdfhjashdjasjkdhaS");
