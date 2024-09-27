@@ -1,5 +1,3 @@
-include_directories("${PROJECT_SOURCE_DIR}/include")
-
 file(GLOB sources "${PROJECT_SOURCE_DIR}/src/*.c")
 list(REMOVE_ITEM sources "${PROJECT_SOURCE_DIR}/src/main.c")
 
@@ -13,6 +11,8 @@ foreach(file ${tests})
     ${sources}
     ${file}
     "${PROJECT_SOURCE_DIR}/test/main.cpp")
-  target_link_libraries("${name}_tests" gtest_main)
+    set_property(TARGET "${name}_tests" PROPERTY
+  RUNTIME_LIBRARY "MTd_StaticDebug")
+  target_link_libraries("${name}_tests" PUBLIC gtest_main)
   add_test(NAME ${name} COMMAND "${name}_tests")
 endforeach()
